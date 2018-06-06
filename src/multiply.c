@@ -6,22 +6,36 @@
 #include <string.h>
 #define MAX 10000
 
-char * multiply( char[], char[] );
+char * multiply(char[], char[]);
 
 int main()
 {
-	char a[MAX];
-	char b[MAX];
+	char a[MAX] = "34543";
+	char b[MAX] = "32433";
 	char *c;
 	int la, lb;
 	int i;
-	printf( "Enter the first number : " );
-	scanf( "%s", a );
-	printf( "Enter the second number : " );
-	scanf( "%s", b );
+	// printf( "Enter the first number : " );
+	// scanf( "%s", a );
+	// printf( "Enter the second number : " );
+	// scanf( "%s", b );
 	printf( "Multiplication of two numbers : " );
-	c = multiply( a, b );
-	printf( "%s\n", c );
+	c = multiply(a,b);
+	printf( "%s\n", c);
+	char d[MAX];
+	for (int i = 0; i < MAX; ++i)
+	{
+		d[i] = c[i];
+	}
+	for (int i = 0; i < MAX; ++i)
+	{
+		if (d[i] != '\0')
+		{
+			printf("%c\n",d[i]);			
+		}
+	}
+	char *e = multiply(d,a);
+	//printf( "%s\n", e);
 	return(0);
 }
 
